@@ -1,5 +1,4 @@
 import sqlite3
-
 def init_db():
     conn = sqlite3.connect("crops.db")
     cursor = conn.cursor()

@@ -31,7 +31,7 @@ INSERT INTO soils(name,notes,image) VALUES
 ('Clay','High water retention, needs organic matter','/static/images/soil_clay.jpg');
 
 -- Sample crops
-INSERT INTO crops(name,soil_preference,short_note,fertilizer_image) VALUES
+INSERT INTO crops(name,soil_preference,short_note,fertilizer,image) VALUES
 ('Tomato','Loamy','Warm-season crop; needs watering','N:80 P:50 K:70','/static/images/tomato.jpg'),
 ('Carrot','Sandy','Root crop; loose soil preferred','N:40 P:50 K:60','/static/images/carrot.jpg'),
 ('Rice','Clay','Flooded fields; needs plenty of water','N:100 P:50 K:50','/static/images/rice.jpg');
