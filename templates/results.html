@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crop Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌿 Search Results for "{{ query }}"</h1>
+
+    {% if results %}
+      <div class="results">
+        {% for crop in results %}
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/' + crop[3]) }}" alt="{{ crop[0] }}">
+          <h2>{{ crop[0] }}</h2>
+          <p><b>Soil Type:</b> {{ crop[1] }}</p>
+          <p><b>Recommended Fertilizer:</b> {{ crop[2] }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No results found for "{{ query }}" 😔</p>
+    {% endif %}
+
+    <a href="/" class="back-btn">🔙 Back to Search</a>
+  </div>
+
+</body>
+</html>
